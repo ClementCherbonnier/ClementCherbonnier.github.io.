@@ -35,8 +35,8 @@
 
   <section class="about" id="about">
     <div class="title white">
-      <h2>À propos</h2>
-      <p>Jeune programmeur Informatique de 20 ans</p>
+      <h2>À propos de moi</h2>
+      <p>Quand la passion rencontre la créativité : Portrait d'un développeur et testeur de 23 ans au caractère équilibré</p>
     </div>
     <div class="content">
       <div class="textBox">
@@ -68,7 +68,7 @@ C'est avec sérieux et observation que je m'immerge dans le monde réel pour m'a
       <div class="servicesBox">
         <img src="./Images/icon3.png">
         <h2>Android</h2>
-        <p>J'ai créé en l'espace de 2 mois (temps de travail réel : 6 jours) un petit jeu mobile dans le style de Pong.
+        <p>J'ai créé en l'espace 6 jours un petit jeu mobile dans le style de Pong.
           J'ai aussi créé avec une équipes un projet de jeu de cartes qui a pris 5 mois de développement.</p>
       </div>
       <div class="servicesBox">
@@ -77,11 +77,21 @@ C'est avec sérieux et observation que je m'immerge dans le monde réel pour m'a
         <p>J'ai développé certaine compétence pour l'animation 3D grâce à un passe temps en utilisant cinéma 4D ainsi
           qu'un peut de 2D en fesant un mini projet Unity</p>
       </div>
+      <div class="servicesBox">
+        <img src="./Images/Test_Quality_icon.png">
+        <h2>Test & qualité</h2>
+        <p>J'ai acquis un grand savoirs-faire pour tester des projets durant ma license et j'ai exercer un grand panel de logiciel permettant d'assurer le test et, par la force des choses, la qualité d'un logiciel.</p>
+      </div>
+      <div class="servicesBox">
+        <img src="./Images/Coher_icon.png">
+        <h2>Coordination des activités</h2>
+        <p>Suite à mon alternance au SIB, j'ai grandemenet élargie mon panel de compétences. Communications avec énormément de personnes, dont des responsables de Buisness-Unit. Avoir la tâche d'ordonner la priorité de certaine action pour respecter les deadlines. Observer cette rigueur et accumuler des connaissance lié à la médecine</p>
+      </div>
     </div>
   </section>
   
   <section class="techUse" id="techUse">
-    <div class="title">
+    <div class="title white">
       <h2>Technologies manipulée</h2>
       <p>Liste des différentes technologies que je connais</p>
     </div>
@@ -89,13 +99,15 @@ C'est avec sérieux et observation que je m'immerge dans le monde réel pour m'a
       <h4>Langage de programmation</h4>
       <div class="imgScroll">
         <div>
-          <img src="LP1.jpg">
-          <img src="LP2.jpg">
-          <img src="LP3.jpg">
-          <img src="LP4.jpg">
-          <img src="LP5.jpg">
-          <img src="LP6.jpg">
-          <img src="LP7.jpg">
+          <img src="./Images/LP1.png">
+          <img src="./Images/LP2.png">
+          <img src="./Images/LP3.png">
+          <img src="./Images/LP4.png">
+          <img src="./Images/LP5.png">
+          <img src="./Images/LP6.png">
+          <img src="./Images/LP7.jpg">
+          <img src="./Images/LP8.png">
+          <img src="./Images/LP9.png">
         </div>
       </div>      
     </div>
@@ -227,6 +239,30 @@ C'est avec sérieux et observation que je m'immerge dans le monde réel pour m'a
       me.style.left = value * -0.5 + 'px';
     })
   </script>
+  
+  <script>
+  // Définissez les variables
+  var container = document.getElementById("imgScrollContainer");
+  var images = container.getElementsByTagName("img");
+  var imageWidth = images[0].width;
+  var offset = 0;
+
+  // Définissez la fonction pour animer les images
+  function scrollImages() {
+    // Incrémentez l'offset
+    offset += 2;
+    if (offset > imageWidth) {
+      offset = 0;
+      // Déplacez la première image à la fin
+      container.appendChild(images[0]);
+    }
+    // Animer le conteneur
+    container.style.left = -offset + "px";
+  }
+
+  // Définissez l'intervalle de temps
+  setInterval(scrollImages, 20);
+</script>
 </body>
 
 </html>
