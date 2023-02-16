@@ -239,6 +239,10 @@ p{
 
 /* TechUse */
 
+.techUse{
+	background: #000;
+}
+
 .techUse .imgScroll{
 	position: absolute;
 	left: 0;
