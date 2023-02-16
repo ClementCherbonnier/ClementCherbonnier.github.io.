@@ -255,17 +255,6 @@ p{
 
 .techUse .imgScroll div{
 	display: flex;
-	animation: animate 40s linear infinite;
-	animation-delay: -20px;
-}
-
-@keyframes animate{
-	0%{
-		transform: translateX(100%);
-	}
-	100%{
-		transform: translateX(-100%);
-	}
 }
 		
 
@@ -289,10 +278,6 @@ p{
 .techUse .imgScroll div img:hover{
 	opacity: 1;
 	filter: blur(0px);
-}
-
-.techUse .imgScroll:hover div{
-	animation-play-state: paused;
 }
 
 /* Work */
