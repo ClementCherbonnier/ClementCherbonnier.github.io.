@@ -239,6 +239,30 @@ C'est avec sérieux et observation que je m'immerge dans le monde réel pour m'a
       me.style.left = value * -0.5 + 'px';
     })
   </script>
+  
+  <script>
+  // Définissez les variables
+  var container = document.getElementById("imgScrollContainer");
+  var images = container.getElementsByTagName("img");
+  var imageWidth = images[0].width;
+  var offset = 0;
+
+  // Définissez la fonction pour animer les images
+  function scrollImages() {
+    // Incrémentez l'offset
+    offset += 2;
+    if (offset > imageWidth) {
+      offset = 0;
+      // Déplacez la première image à la fin
+      container.appendChild(images[0]);
+    }
+    // Animer le conteneur
+    container.style.left = -offset + "px";
+  }
+
+  // Définissez l'intervalle de temps
+  setInterval(scrollImages, 20);
+</script>
 </body>
 
 </html>
